@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://barberiaomar.netlify.app/sitemap.xml
+
+# Disallow admin panel
+Disallow: /admin.html
+Disallow: /admin.css
+Disallow: /admin.js 

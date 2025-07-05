@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Barbería Omar</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>Panel de Administración</h1>
+        <p class="bienvenida">Bienvenido, propietario. Gestiona aquí todos los contenidos de tu web.</p>
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="general">General</button>
+            <button class="tab-btn" data-tab="imagenes">Imágenes</button>
+            <button class="tab-btn" data-tab="servicios">Servicios</button>
+            <button class="tab-btn" data-tab="horarios">Horarios</button>
+            <button class="tab-btn" data-tab="testimonios">Testimonios</button>
+            <button class="tab-btn" data-tab="pagos">Métodos de Pago</button>
+        </div>
+        <div class="tab-content active" id="tab-general">
+            <form id="formGeneral">
+                <h2>Datos Generales</h2>
+                <div class="form-group">
+                    <label for="nombreNegocio">Nombre del Negocio</label>
+                    <input type="text" id="nombreNegocio" name="nombreNegocio" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <button type="submit" class="btn-guardar">Guardar General</button>
+                <div class="mensaje" id="mensajeGeneral" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="tab-content" id="tab-imagenes">
+            <form id="formImagenes">
+                <h2>Imágenes</h2>
+                <div class="form-group">
+                    <label for="imagenPortada">Imagen de Portada</label>
+                    <input type="file" id="imagenPortada" name="imagenPortada" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="galeria">Galería (puedes subir varias)</label>
+                    <input type="file" id="galeria" name="galeria" accept="image/*" multiple>
+                </div>
+                <button type="submit" class="btn-guardar">Guardar Imágenes</button>
+                <div class="mensaje" id="mensajeImagenes" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="tab-content" id="tab-servicios">
+            <form id="formServicios">
+                <h2>Servicios y Precios</h2>
+                <div id="servicios-lista"></div>
+                <button type="button" id="agregarServicio" class="btn-guardar" style="background:#f7ca18;color:#232323;">Añadir Servicio</button>
+                <button type="submit" class="btn-guardar">Guardar Servicios</button>
+                <div class="mensaje" id="mensajeServicios" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="tab-content" id="tab-horarios">
+            <form id="formHorarios">
+                <h2>Horarios</h2>
+                <div class="form-group">
+                    <label for="horarioSemana">Lunes a Viernes</label>
+                    <input type="text" id="horarioSemana" name="horarioSemana" placeholder="Ej: 10:00 - 14:00, 16:00 - 20:00" required>
+                </div>
+                <div class="form-group">
+                    <label for="horarioSabado">Sábado</label>
+                    <input type="text" id="horarioSabado" name="horarioSabado" placeholder="Ej: 10:00 - 14:00" required>
+                </div>
+                <div class="form-group">
+                    <label for="horarioDomingo">Domingo</label>
+                    <input type="text" id="horarioDomingo" name="horarioDomingo" placeholder="Ej: Cerrado" required>
+                </div>
+                <button type="submit" class="btn-guardar">Guardar Horarios</button>
+                <div class="mensaje" id="mensajeHorarios" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="tab-content" id="tab-testimonios">
+            <form id="formTestimonios">
+                <h2>Testimonios</h2>
+                <div id="testimonios-lista"></div>
+                <button type="button" id="agregarTestimonio" class="btn-guardar" style="background:#f7ca18;color:#232323;">Añadir Testimonio</button>
+                <button type="submit" class="btn-guardar">Guardar Testimonios</button>
+                <div class="mensaje" id="mensajeTestimonios" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="tab-content" id="tab-pagos">
+            <form id="configForm" class="admin-form">
+                <h2>Métodos de Pago</h2>
+                <div class="form-group">
+                    <input type="checkbox" id="pago-tarjeta" name="pago-tarjeta">
+                    <label for="pago-tarjeta">Permitir pago con <strong>Tarjeta</strong></label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="pago-bizum" name="pago-bizum">
+                    <label for="pago-bizum">Permitir pago con <strong>Bizum</strong></label>
+                </div>
+                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                <div id="mensaje" class="mensaje" style="display:none;"></div>
+            </form>
+        </div>
+        <div class="aviso-seguridad">⚠️ Esta página está protegida por contraseña. No compartas tus credenciales con nadie.</div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html> 

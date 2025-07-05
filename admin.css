@@ -1,0 +1,79 @@
+body {
+    background: #181818;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: #232323;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    padding: 2.5rem 2rem 2rem 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #e94560;
+    font-size: 2rem;
+}
+
+.admin-form h2 {
+    color: #f7ca18;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background: #1a1a2e;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.form-group input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: #e94560;
+    margin-right: 1rem;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.btn-guardar {
+    width: 100%;
+    padding: 0.9rem;
+    background: #e94560;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-guardar:hover {
+    background: #f7ca18;
+    color: #232323;
+}
+
+.mensaje {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    background: #222a;
+    color: #f7ca18;
+} 
